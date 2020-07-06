@@ -34,8 +34,8 @@ def test(df, regr, t):
     tempPredict = regr.predict(df[['temperature', 'humidity']])
     ax.plot_trisurf(df['temperature'].to_numpy(), df['humidity'].to_numpy(), tempPredict, alpha=0.5)
     ax.scatter(df['temperature'], df['humidity'], df['next'], marker='.', color='red')
-    ax.set_xlabel("humidity")
-    ax.set_ylabel("temperature")
+    ax.set_xlabel("temperature")
+    ax.set_ylabel("humidity")
     ax.set_zlabel("after " + str(t) + "s")
                     
 def multipleRegression(x, y):
