@@ -60,6 +60,6 @@ def main():
         dfTrain, dfTest = splitTrainTest(df1)
         regr = multipleRegression(dfTrain[['temperature', 'humidity']], dfTrain['next'])
         updateRegressionData(t, regr)
-        test(dfTrain, regr, t)
+        test(dfTest, regr, t)
         
 main()
